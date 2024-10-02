@@ -23,8 +23,8 @@ test.describe('shard 5', () => {
         await expect(page.getByRole('link', {name: 'Star microsoft/playwright on GitHub'})).toBeVisible();
     })
 
-    test('dark mode button', async ({page}) => {
+    test('discord link', async ({page}) => {
         await page.goto('https://playwright.dev/');
-        await expect(page.getByRole('button', {name: 'Switch between dark and light mode (currently light mode)'})).toBeEnabled();
+        await expect(page.getByRole('link', {name: 'Discord server'})).toBeEnabled();
     })
 })
