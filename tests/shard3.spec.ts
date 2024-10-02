@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
 
-test.describe('shard 2', () => {
+test.describe('shard 3', () => {
 
     test('has title', async ({page}) => {
         await page.goto('https://playwright.dev/');
@@ -13,4 +13,8 @@ test.describe('shard 2', () => {
         await expect(page.getByRole('heading', {name: 'Installation'})).toBeVisible();
     });
 
+    test('search button', async ({page}) => {
+        await page.goto('https://playwright.dev/');
+        await expect(page.getByRole('button', {name: 'Search'})).toBeEnabled();
+    })
 })
